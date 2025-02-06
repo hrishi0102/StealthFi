@@ -38,7 +38,17 @@ const Navbar = () => {
                     : "text-gray-300 hover:bg-gray-700 hover:text-white"
                 }`}
               >
-                AI Agent
+                Onchain Agent
+              </Link>
+              <Link
+                to="/chat-defi"
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  isActive("/agent-chat")
+                    ? "bg-gray-900 text-white"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                }`}
+              >
+                Defi Agent
               </Link>
             </div>
           </div>

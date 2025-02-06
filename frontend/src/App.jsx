@@ -11,6 +11,7 @@ import IncomeVerification from "./components/IncomeVerification";
 import Dashboard from "./components/Dashboard";
 import AgentChatPage from "./pages/AgentChatPage";
 import Navbar from "./components/Navbar";
+import ChatInterface from "./pages/ChatInterface";
 
 function App() {
   const { isConnected } = useAppKitAccount();
@@ -29,6 +30,7 @@ function App() {
             <Route path="/home" element={<Dashboard />} />
             <Route path="/agent-chat" element={<AgentChatPage />} />
             <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/chat-defi" element={<ChatInterface />} />
           </Routes>
         </div>
       )}
