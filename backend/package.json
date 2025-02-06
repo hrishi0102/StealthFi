@@ -15,6 +15,7 @@
   "dependencies": {
     "@coinbase/agentkit": "^0.1.0",
     "@coinbase/agentkit-langchain": "^0.1.0",
+    "@covalenthq/ai-agent-sdk": "^0.2.5",
     "@google/generative-ai": "^0.21.0",
     "@langchain/core": "^0.3.37",
     "@langchain/langgraph": "^0.2.44",
@@ -23,6 +24,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "nillion-sv-wrappers": "^1.0.3",
+    "openai": "^4.83.0",
     "snarkjs": "^0.7.5"
   },
   "devDependencies": {

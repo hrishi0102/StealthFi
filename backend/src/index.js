@@ -5,6 +5,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import fs from "fs";
 import agentRoutes from "./routes/agentRoutes.js";
 import nillionRoutes from "./routes/nillionRoutes.js";
+import covalentRoutes from "./routes/covalentRoutes.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -55,6 +56,7 @@ app.post("/api/verify-proof", async (req, res) => {
 
 app.use("/api/nillion", nillionRoutes);
 app.use("/api/agent", agentRoutes);
+app.use("/api/covalent", covalentRoutes);
 
 app.post("/api/get-recommendations", async (req, res) => {
   try {
