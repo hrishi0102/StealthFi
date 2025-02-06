@@ -74,13 +74,13 @@ export async function initializeAgent() {
     //     baseURL: "https://api.groq.com/openai/v1",
     //   },
     // });
-    // const llm = new ChatOpenAI({
-    //   model: "llama-3.3-70b-versatile",
-    //   apiKey: process.env.LLAMA_API_KEY,
-    //   configuration: {
-    //     baseURL: "https://api.groq.com/openai/v1",
-    //   },
-    // });
+    const llm = new ChatOpenAI({
+      model: "llama-3.3-70b-versatile",
+      apiKey: process.env.LLAMA_API_KEY,
+      configuration: {
+        baseURL: "https://api.groq.com/openai/v1",
+      },
+    });
 
     let walletDataStr = null;
     if (fs.existsSync(WALLET_DATA_FILE)) {

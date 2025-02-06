@@ -1,9 +1,21 @@
 import React from "react";
-import { useAppKit } from "@reown/appkit/react";
+import { useAppKit, useAppKitAccount } from "@reown/appkit/react";
 import { Wallet } from "lucide-react";
 
 const ConnectWallet = () => {
   const { open } = useAppKit();
+  const { isConnected } = useAppKitAccount();
+
+  const handleConnect = async () => {
+    try {
+      await open();
+      if (isConnected) {
+        localStorage.setItem("walletConnected", "true");
+      }
+    } catch (error) {
+      console.error("Connection error:", error);
+    }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900">
@@ -31,7 +43,7 @@ const ConnectWallet = () => {
         {/* Connect Button */}
         <div className="mt-8">
           <button
-            onClick={open}
+            onClick={handleConnect}
             className="group relative w-full flex items-center justify-center px-4 py-3 border border-transparent 
                      text-sm font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 
                      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 
