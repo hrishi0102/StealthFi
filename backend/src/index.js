@@ -32,6 +32,7 @@ app.post("/api/generate-proof", async (req, res) => {
       "../../zk-proof/output/incomeProof_js/incomeProof.wasm",
       zkeyPath
     );
+    console.log("Proof generated:", proof, publicSignals);
     res.json({ proof, publicSignals });
   } catch (error) {
     console.error("Error generating proof:", error);
@@ -44,6 +45,7 @@ app.post("/api/verify-proof", async (req, res) => {
     const { proof, publicSignals } = req.body;
     const isValid = await groth16.verify(vkey, publicSignals, proof);
     const isAboveThreshold = publicSignals[0] === "1";
+    console.log("Proof verified:", isValid, isAboveThreshold);
     res.json({ isValid: isValid && isAboveThreshold });
   } catch (error) {
     console.error("Error verifying proof:", error);

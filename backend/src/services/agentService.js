@@ -35,6 +35,22 @@ export async function initializeAgent() {
       );
     }
 
+    // Initialze a GAIA Node API client
+    // const llm = new ChatOpenAI({
+    //   model: "	llama70b",
+    //   apiKey: "gaia",
+    //   configuration: {
+    //     baseURL: "https://llama70b.gaia.domains/v1",
+    //   },
+    // });
+    // const llm = new ChatOpenAI({
+    //   model: "llama",
+    //   apikey: process.env.GAIA,
+    //   configuration: {
+    //     baseURL: "https://llama8b.gaia.domains/v1",
+    //   },
+    // });
+
     //Initialze a Groq API client
     // const llm = new ChatOpenAI({
     //   model: "llama3-70b-8192",
