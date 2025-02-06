@@ -12,6 +12,7 @@ import Dashboard from "./components/Dashboard";
 import AgentChatPage from "./pages/AgentChatPage";
 import Navbar from "./components/Navbar";
 import ChatInterface from "./pages/ChatInterface";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   const { address, isConnected } = useAppKitAccount();
@@ -62,8 +63,9 @@ function App() {
         <IncomeVerification onVerified={() => setIsVerified(true)} />
       ) : (
         <div className="min-h-screen bg-gray-100">
-          <Navbar />
+          {/* <Navbar /> */}
           <Routes>
+            <Route path="/landing" element={<LandingPage />} />
             <Route path="/home" element={<Dashboard />} />
             <Route path="/agent-chat" element={<AgentChatPage />} />
             <Route path="/" element={<Navigate to="/home" replace />} />
