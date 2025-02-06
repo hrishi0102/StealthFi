@@ -124,12 +124,6 @@ _Reference_: [Covalent Documentation](https://cxt.build/docs/overview)
 
 ---
 
-### Integration of Gaia and Hyperbolic LLM in StealthFi
-
-StealthFi incorporates advanced AI capabilities by integrating Large Language Models (LLMs) from Gaia and Hyperbolic. Below is an overview of how each is utilized within the project and the benefits they provide.
-
----
-
 **4. Gaia LLM (Eigenlayer AVS)**
 
 **Integration**:
