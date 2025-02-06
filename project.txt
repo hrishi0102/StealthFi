@@ -1,0 +1,21 @@
+Okay, so the project name is
+
+StealthFi. It is an AI powered defi advisor where your sensitive financial data gets stored in private node encrypted. It also has zkproofs, to verify your income without revealing it. in short a AI defi advisor with zkproofs and private decentralised data storage
+
+The user flow is as follows:
+
+1) User connects the wallet using reown appkit sdk.
+
+2) After successful connection, user has to enter his/her current income. our platform has a threshold that above 50000 you can enter the dapp. After inputting he income, a zk-proof is generate using snarkjs and it is verified using groth16. ZK-proof is created using circom circuit. Use of zk proof is that the user proofs his income is above a threshold without actually revealing it.
+
+3) After successful verification, the user enters home page. where he can enter his investement preferences after submitting, investment preferences are stored using nillion nodes. The data is stored ecurely, privately and by encryption on various nillion nodes.
+
+4) We fetch the data from nillion nodes, decrypt it and give it to an ai agent for advise. The ai agent advises the user about defi opportunities based on his/her preferences.
+
+5) We then have a chat-defi page where the user can ask his/her general queries and doubts regarding defi/blockchain/current market trends. This is done using covalent ai agents and covalent goldrush apis for tools and fucntion calling to get the latest and upto date data.
+
+6) Finally user can navigate to agent-chat page. This is an important page because it contains an Onchain AI agent using Coinbase AI AgentKt. It can perform actual onchain tasks such as creating a 1-1 wallet for user automatically, receivig funds from a faucet , sending tokens to an account and registerig basenames, creating NFTs, etc just by user giving him natural language prompts. This is helpful for web2 or newbie users to navigate the defi world without worrying about gas fees, creating wallets, interacting on blockchain, etc. The agentkit uses GAIA llm as well as it can use Hyperbolic llm which are part of EigenLayer AVS.
+
+
+
+Understand it well first.

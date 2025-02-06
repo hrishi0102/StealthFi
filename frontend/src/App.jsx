@@ -63,7 +63,7 @@ function App() {
         <IncomeVerification onVerified={() => setIsVerified(true)} />
       ) : (
         <div className="min-h-screen bg-gray-100">
-          {/* <Navbar /> */}
+          <Navbar />
           <Routes>
             <Route path="/landing" element={<LandingPage />} />
             <Route path="/home" element={<Dashboard />} />

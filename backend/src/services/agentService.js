@@ -53,18 +53,18 @@ export async function initializeAgent() {
     // });
 
     //Initialze hyperbolic model
-    // const hyperbolicClient = new OpenAI({
-    //   apiKey: process.env.HYPERBOLIC_API_KEY,
-    //   baseURL: "https://api.hyperbolic.xyz/v1",
-    // });
-    // const llm = new ChatOpenAI({
-    //   model: "meta-llama/Meta-Llama-3.1-70B-Instruct",
-    //   apiKey: process.env.HYPERBOLIC_API_KEY,
-    //   configuration: {
-    //     baseURL: "https://api.hyperbolic.xyz/v1",
-    //     client: hyperbolicClient,
-    //   },
-    // });
+    const hyperbolicClient = new OpenAI({
+      apiKey: process.env.HYPERBOLIC_API_KEY,
+      baseURL: "https://api.hyperbolic.xyz/v1",
+    });
+    const llm = new ChatOpenAI({
+      model: "meta-llama/Meta-Llama-3.1-70B-Instruct",
+      apiKey: process.env.HYPERBOLIC_API_KEY,
+      configuration: {
+        baseURL: "https://api.hyperbolic.xyz/v1",
+        client: hyperbolicClient,
+      },
+    });
 
     //Initialze a Groq API client
     // const llm = new ChatOpenAI({
@@ -74,13 +74,13 @@ export async function initializeAgent() {
     //     baseURL: "https://api.groq.com/openai/v1",
     //   },
     // });
-    const llm = new ChatOpenAI({
-      model: "llama-3.3-70b-versatile",
-      apiKey: process.env.LLAMA_API_KEY,
-      configuration: {
-        baseURL: "https://api.groq.com/openai/v1",
-      },
-    });
+    // const llm = new ChatOpenAI({
+    //   model: "llama-3.3-70b-versatile",
+    //   apiKey: process.env.LLAMA_API_KEY,
+    //   configuration: {
+    //     baseURL: "https://api.groq.com/openai/v1",
+    //   },
+    // });
 
     let walletDataStr = null;
     if (fs.existsSync(WALLET_DATA_FILE)) {
