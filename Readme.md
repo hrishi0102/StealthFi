@@ -4,6 +4,9 @@
 
 StealthFi is a revolutionary AI-powered DeFi advisor designed to empower users to navigate the complexities of decentralized finance with confidence and privacy. We leverage cutting-edge technologies like zero-knowledge proofs (zk-proofs), private decentralized storage, and on-chain AI agents to provide personalized investment recommendations and automate DeFi interactions, all while ensuring the utmost security and user-friendliness.
 
+![Screenshot 2025-02-06 222656](https://github.com/user-attachments/assets/fb9e7366-a468-4ea1-838f-cb4616398fca)
+
+
 ## Table of Contents
 
 - [Introduction](#introduction)
